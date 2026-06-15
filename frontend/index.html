@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | FormBuilder AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div>
+                <h1 class="gradient-text">FormBuilder AI</h1>
+                <p class="text-muted">Manage your forms and view AI insights.</p>
+            </div>
+            <a href="builder.html" class="btn btn-primary">+ Create New Form</a>
+        </header>
+
+        <div class="stats-grid">
+            <div class="glass-card stat-card">
+                <h3>Total Forms</h3>
+                <p id="total-forms">0</p>
+            </div>
+            <div class="glass-card stat-card">
+                <h3>Total Responses</h3>
+                <p id="total-responses">0</p>
+            </div>
+            <div class="glass-card stat-card">
+                <h3>Avg. Completion</h3>
+                <p id="avg-completion">0%</p>
+            </div>
+        </div>
+
+        <h2>Your Forms</h2>
+        <div class="forms-grid" id="forms-container">
+            <p class="text-muted">Loading forms...</p>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

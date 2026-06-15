@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Builder | FormBuilder AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div>
+                <h1 class="gradient-text">Create Form</h1>
+                <p class="text-muted">Drag and drop fields or use AI to generate questions.</p>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+                <a href="index.html" class="btn btn-secondary">Cancel</a>
+                <button id="save-form" class="btn btn-primary">Save & Publish</button>
+            </div>
+        </header>
+
+        <div class="builder-layout">
+            <!-- Sidebar: Available Fields -->
+            <div class="glass-card">
+                <h3>Available Fields</h3>
+                <p class="text-muted" style="margin-bottom: 1rem; font-size: 0.9rem;">Drag these to your form.</p>
+                <div id="field-list" class="field-list">
+                    <div class="field-pill" data-type="text">Text Input</div>
+                    <div class="field-pill" data-type="email">Email Input</div>
+                    <div class="field-pill" data-type="textarea">Text Area</div>
+                    <div class="field-pill" data-type="number">Number Input</div>
+                    <div class="field-pill" data-type="checkbox">Checkbox</div>
+                </div>
+
+                <div class="ai-panel">
+                    <h3>AI Generator</h3>
+                    <p class="text-muted" style="font-size: 0.8rem; margin-bottom: 0.5rem;">Enter a topic to generate questions.</p>
+                    <input type="text" id="ai-topic" class="input-basic" placeholder="e.g. Employee Satisfaction" style="margin-bottom: 0.5rem;">
+                    <button id="btn-generate" class="btn btn-primary" style="width: 100%; justify-content: center;">Generate</button>
+                </div>
+            </div>
+
+            <!-- Main Canvas -->
+            <div class="glass-card">
+                <input type="text" id="form-title" class="input-basic" placeholder="Form Title" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem; border:none; border-bottom: 1px solid var(--text-muted); border-radius: 0;">
+                <input type="text" id="form-desc" class="input-basic" placeholder="Form Description" style="margin-bottom: 2rem; border:none; border-bottom: 1px solid var(--text-muted); border-radius: 0;">
+                
+                <div id="drop-zone" class="drop-zone">
+                    <p class="text-muted" style="text-align: center; margin-top: auto; margin-bottom: auto;" id="empty-state">Drag fields here or use AI to generate.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/builder.js"></script>
+</body>
+</html>

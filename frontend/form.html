@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Form | FormBuilder AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .form-responder-container {
+            max-width: 600px;
+            margin: 4rem auto;
+        }
+        .responder-title {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        .responder-desc {
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+        .field-group {
+            margin-bottom: 1.5rem;
+        }
+        .field-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-responder-container">
+        <div class="glass-card" id="form-container">
+            <h1 class="responder-title" id="r-title">Loading...</h1>
+            <p class="responder-desc" id="r-desc">Please wait while we load the form.</p>
+            
+            <form id="public-form">
+                <div id="fields-container"></div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem; display:none;" id="btn-submit">Submit Responses</button>
+            </form>
+        </div>
+        
+        <div class="glass-card" id="success-message" style="display: none; text-align: center;">
+            <h2 style="color: var(--success); margin-bottom: 1rem;">Thank You!</h2>
+            <p class="text-muted">Your responses have been successfully recorded.</p>
+        </div>
+    </div>
+    <script src="js/form.js"></script>
+</body>
+</html>
