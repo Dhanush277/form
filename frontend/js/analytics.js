@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:8000';
+const API_BASE = 'https://form-s6q4.onrender.com';
 const urlParams = new URLSearchParams(window.location.search);
 const formId = urlParams.get('id');
 
