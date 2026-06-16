@@ -15,7 +15,9 @@ app = FastAPI(title="AI-Enhanced Form Builder API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:5173", 
+            "http://localhost:8000", 
+            "https://form-iota-ebon.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
