@@ -1,3 +1,4 @@
+const API_BASE = 'https://form-s6q4.onrender.com';
 const dropZone = document.getElementById('drop-zone');
 const emptyState = document.getElementById('empty-state');
 
